@@ -1,10 +1,4 @@
 /*
-1. Styleguide:
-
-Fonts:
-* Roboto 300
-* Merriweather 400
-
 Colors:
 
 Background: #343434
@@ -13,3 +7,40 @@ Blues: #4F77C7, #4367AE, #7195DE
 Accent: #D5D5D5
 Type: #000000
 Hyperlinks: #4367AE
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner {
+  /* Specify height and width inline style. */
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  height: 10em;
+}
+
+.banner img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 25em;
+  }
+}
