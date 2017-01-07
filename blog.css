@@ -32,7 +32,7 @@ p {
   margin: 0;
   border: 0;
   border-radius: 0;
-  height: 10em;
+  height: 160px;
 }
 
 .banner img {
@@ -41,6 +41,6 @@ p {
 
 @media (min-width: 768px) {
   .banner {
-    height: 25em;
+    height: 400px;
   }
 }
