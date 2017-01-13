@@ -237,3 +237,18 @@ a:hover {
 .button:hover h5 {
   color: #DD7171;
 }
+
+/* Homepage */
+
+.article_img {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 16px;
+  height: 96px;
+}
+
+.article_img img {
+  width: 100%;
+}
