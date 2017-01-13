@@ -155,6 +155,11 @@ a:hover {
   margin-right: 8px;
   border-radius: 16px;
 }
+
+.social_btn:hover {
+  opacity: 0.7;
+}
+
 /* Content */
 
 .content-width {
@@ -211,3 +216,24 @@ a:hover {
   }
 }
 /* Related Articles */
+.button {
+  height: 24px;
+  border: 1px #AE4343 solid;
+  border-radius: 12px;
+}
+
+.button h5 {
+  text-align: center;
+  margin-top: 2px;
+  margin-left: 24px;
+  margin-right: 24px;
+  color: #AE4343;
+}
+
+.button:hover {
+  border: 1px #DD7171 solid;
+}
+
+.button:hover h5 {
+  color: #DD7171;
+}
