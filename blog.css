@@ -55,13 +55,13 @@ b {
 }
 
 a {
-  color: #337AB7;
   cursor: pointer;
+  color: inherit;
 }
 
 a:hover {
-  color: #7CBDF5;
   text-decoration: none;
+  color: inherit;
 }
 
 .center-block {
@@ -157,7 +157,7 @@ a:hover {
 }
 /* Content */
 
-.content {
+.content-width {
   width: 696px;
   max-width: 100%;
   padding: 16px;
@@ -167,6 +167,15 @@ a:hover {
   max-width: 100%;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.content a {
+  color: #337AB7;
+}
+
+.content a:hover {
+  color: #7CBDF5;
+  text-decoration: none;
 }
 
 /* Author */
