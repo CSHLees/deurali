@@ -1,34 +1,44 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
 <head>
-    <meta name="robots" content="noindex" />
-    {{!-- Document Settings --}}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="noindex" />
+  {{!-- Document Settings --}}
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    {{!-- Page Meta --}}
-    <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+  {{!-- Page Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
 
-    {{!-- Mobile Meta --}}
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{!-- Mobile Meta --}}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {{!-- Brand icon --}}
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+  {{!-- Brand icon --}}
+  <link rel="shortcut icon" type="image/png" href="{{asset 'images/favicon.png'}}" />
 
-    {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/blog.css"}}" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather;400,700|Roboto:300" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/blog.css" />
-    {{!-- Ghost outputs important style and meta data with this tag --}}
-    {{ghost_head}}
+  {{!-- Styles'n'Scripts --}}
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather;400,700|Roboto:300" />
+  <link rel="stylesheet" type="text/css" href="{{asset 'css/blog.css'}}" />
+
+{{ghost_head}}
+
 </head>
-<body>
-    {{> toolbar}}
-    {{{body}}}
-    {{> footer}}
-    {{ghost_foot}}
+
+<body style= 'background-color: #343434;'>
+<div class= 'container-fluid'>
+  {{> toolbar}}
+  {{{body}}}
+  {{> footer}}
+</div>
+{{ghost_foot}}
 </body>
+
 </html>

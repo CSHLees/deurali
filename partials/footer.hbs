@@ -1,8 +1,8 @@
 <section class= 'row'>
-  <div class= 'col-xs-12' style= 'background-image: url("/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/assets/images/tri_pattern.png"); background-repeat: repeat;'>
+  <div class= 'col-xs-12' style= 'background-image: url("{{asset 'images/tri_pattern.png'}}"); background-repeat: repeat;'>
     <div style= 'text-align: center;'>
-      <a>
-        <img style= 'height: 24px; margin-top: 24px; margin-bottom: 24px;' src= '/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/assets/images/deurali_white.svg' />
+      <a href= '{{@blog.url}}'>
+        <img src= "{{asset 'images/deurali_white.svg'}}" style= 'height: 24px; margin-top: 24px; margin-bottom: 24px;'/>
       </a>
     </div>
   </div>

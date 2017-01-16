@@ -1,17 +1,37 @@
 <section class= 'row'>
   <div class= 'col-xs-12'>
-    <div class= 'center-block' style= 'height: 1px; background-image: radial-gradient(#ABABAB, #FFFFFF); width: 100%; max-width: 696px;'></div>
+    {{#is "post"}}
+    <div class= 'center-block' style= 'background-image: radial-gradient(#343434, #FFFFFF); padding-top: 1px; padding-bottom: 1px; width: 100%; max-width: 696px;'>
+      <a href= "{{@blog.url}}">
+        <div class= 'valign' style= 'width: 100%; height: 100%; background-color: #FFFFFF; padding: 32px;'>
+          <img class= 'center-block' style= 'width: 44px; height: 28px;' src= '{{asset "images/barchart.svg"}}' />
+          <h3 style= 'text-align: center; margin: 0px;'>Recent Articles</h3>
+        </div>
+      </a>
+    </div>
+    {{else}}
+    <div class= 'center-block' style= 'background-image: radial-gradient(#ABABAB, #FFFFFF); height: 1px; width: 100%; max-width: 696px;'></div>
+    {{/is}}
   </div>
   <div class= 'col-xs-12'>
     <div class= 'content-width center-block'>
-
-      <div style= 'text-align: center;'>
-        <a>
-          <div class= 'button' style= 'margin-top: 32px; margin-bottom: 32px; display: inline-block;'>
+      {{#is "post"}}
+        {{#get "posts" limit="3" filter="id:-{{id}}"}}
+          {{#foreach posts}}
+            {{> article}}
+          {{/foreach}}
+        {{/get}}
+      {{else}}
+        {{#foreach posts from="2" limit="5"}}
+          {{> article}}
+        {{/foreach}}
+      {{/is}}
+      <div style= 'text-align: center; margin-top: 32px; margin-bottom: 32px;'>
+        <a href= "{{@blog.url}}">
+          <div class= 'button' style= 'display: inline-block;'>
             <h5>See All Articles</h5>
           </div>
         </a>
       </div>
-    </div>
   </div>
 </section>

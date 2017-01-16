@@ -1,13 +1,24 @@
+{{#author}}
 <section class= 'row' style= 'padding-top: 64px; padding-bottom: 64px;'>
   <div class= 'col-xs-12 author' style= 'text-align: center;'>
+
+    {{#if twitter}}
     <div>
-      <a>
-        <img style= 'width: 96px; height: 96px; border: 1px #D5D5D5 solid; border-radius: 48px;' src= '/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/assets/images/cameron.jpg' />
+      <a href= '{{twitter_url}}'>
+        <img style= 'width: 96px; height: 96px; border: 1px #D5D5D5 solid; border-radius: 48px;' src= '{{image}}' />
       </a>
-      <a>
-        <img class= 'social_btn' style= 'position: relative; float: right; bottom: 16px; margin: 0;' src= '/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/assets/images/twitter.svg' />
+      <a href= '{{twitter_url}}'>
+        <img class= 'social_btn' style= 'position: relative; float: right; bottom: 16px; margin: 0;' src= "{{asset 'images/twitter.svg'}}" />
       </a>
     </div>
-    <p class= 'valign'><b>Cameron Lees</b> writes about statistical methods and their applications at Deurali.</p>
+
+    {{else}}
+    <div>
+      <img style= 'width: 96px; height: 96px; border: 1px #D5D5D5 solid; border-radius: 48px;' src= '{{image}}' />
+    </div>
+    {{/if}}
+
+    <p class= 'valign'><a href= "{{twitter_url}}"><b>{{name}}</b></a> {{bio}}</p>
   </div>
 </section>
+{{/author}}

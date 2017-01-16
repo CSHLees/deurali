@@ -1,5 +1,10 @@
-{{!> default}}
+{{!< default}}
 
+{{#posts.[0]}}
+<a href= '{{url}}'>
 {{> banner}}
+{{> title}}
+</a>
+{{/posts.[0]}}
 
-{{> all-articles}}
+{{> recent-articles}}

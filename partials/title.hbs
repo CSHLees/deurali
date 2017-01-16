@@ -2,28 +2,40 @@
   <div class= 'col-xs-12' style= 'padding: 8px;'>
     <div style= 'float: left;'>
       <div class= 'date'>
-        <h6 class= 'vtext valign'>2016</h6>
+        <h6 class= 'vtext valign'>{{date published_at format= 'YYYY'}}</h6>
         <div class= 'valign'>
           <h5 style= 'text-align: center;'>
-            12<br>
-            Dec
+            {{date published_at format= 'DD'}}<br>
+            {{date published_at format= 'MMM'}}
           </h5>
         </div>
       </div>
     </div>
     <div class= 'title'>
-      <h1 style= 'width: 100%; margin-top: 4px; max-width: 664px; padding-right: 32px;'>The Tallest Mountains in the World are the Himalayas</h1>
+      <h1 style= 'width: 100%; margin-top: 4px; max-width: 664px; padding-right: 32px;'>{{title}}</h1>
+
+      {{#is 'post'}}
       <div style= 'margin-top: 16px; margin-left: -8px;'>
-        <a>
-          <img class= 'social_btn' src= '/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/assets/images/twitter.svg' />
+        <a rel= 'nofollow' href="http://twitter.com/share?text={{title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <img class= 'social_btn' src= "{{asset 'images/twitter.svg'}}" />
         </a>
-        <a>
-          <img class= 'social_btn' src= '/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/assets/images/facebook.svg' />
+        <a rel= 'nofollow' href="https://www.facebook.com/sharer/sharer.php?sdk=joey&u=https%3A%2F%2Fwww.deurali.co%2F{{encode slug}}%2F&amp;" onclick="window.open(this.href, 'facebook-share', 'width=550,height=235');return false;">
+          <img class= 'social_btn' src= "{{asset 'images/facebook.svg'}}" />
         </a>
-        <a>
-          <img class= 'social_btn' src= '/Users/cameronlees/Documents/Projects/Deurali Blog/deurali/assets/images/email.svg' />
+        <a rel= 'nofollow' href= "mailto:?subject=I thought you’d like this article from Deurali&amp;body=https%3A%2F%2Fwww.deurali.co%2F{{encode slug}}">
+          <img class= 'social_btn' src= "{{asset 'images/email.svg'}}" />
         </a>
       </div>
+      {{/is}}
+
+      {{#is 'index'}}
+      <div style= 'text-align: left;'>
+          <div class= 'button' style= 'margin-bottom: 16px; margin-right: 8px; display: inline-block;'>
+            <h5>Featured Article</h5>
+          </div>
+      </div>
+      {{/is}}
+
     </div>
   </div>
 </section>
