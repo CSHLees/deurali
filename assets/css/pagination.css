@@ -1,0 +1,15 @@
+.page-visible {
+  display: block;
+}
+
+.page-hide {
+  display: none;
+}
+
+.page-2-hide {
+  display: none !important;
+}
+
+.page-2-visible {
+  display: block !important;
+}

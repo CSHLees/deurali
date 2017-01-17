@@ -1,0 +1,10 @@
+<link rel="stylesheet" type="text/css" href="{{asset 'css/pagination.css'}}" />
+
+<div style= 'page display: inline-block;'>
+  <h5 class= 'page-visible page-{{page}}-hide'>
+    <a href= '{{page_url prev}}'>Previous</a> | <b>Page {{page}}</b> | {{#if next}}<a href= '{{page_url next}}'>Next</a>{{else}}<span style='visibility: hidden;'>Next</span>{{/if}}
+  </h5>
+  <h5 class= 'page-hide page-{{page}}-visible'>
+    <a href= 'https://www.deurali.co/index'>Previous</a> | <b>Page {{page}}</b> | {{#if next}}<a href= '{{page_url next}}'>Next</a>{{else}}<span style='visibility: hidden;'>Next</span>{{/if}}
+  </h5>
+</div>

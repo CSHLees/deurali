@@ -2,7 +2,7 @@
   <div class= 'col-xs-12'>
     {{#is "post"}}
     <div class= 'center-block' style= 'background-image: radial-gradient(#343434, #FFFFFF); padding-top: 1px; padding-bottom: 1px; width: 100%; max-width: 696px;'>
-      <a href= "{{@blog.url}}">
+      <a href= "https://www.deurali.co/index">
         <div class= 'valign' style= 'width: 100%; height: 100%; background-color: #FFFFFF; padding: 32px;'>
           <img class= 'center-block' style= 'width: 44px; height: 28px;' src= '{{asset "images/barchart.svg"}}' />
           <h3 style= 'text-align: center; margin: 0px;'>Recent Articles</h3>
@@ -10,7 +10,16 @@
       </a>
     </div>
     {{else}}
+      {{#is "home"}}
     <div class= 'center-block' style= 'background-image: radial-gradient(#ABABAB, #FFFFFF); height: 1px; width: 100%; max-width: 696px;'></div>
+      {{else}}
+      <div class= 'center-block' style= 'background-image: radial-gradient(#343434, #FFFFFF); padding-bottom: 1px; width: 100%; max-width: 696px;'>
+          <div class= 'valign' style= 'width: 100%; height: 100%; background-color: #FFFFFF; padding: 32px;'>
+            <img class= 'center-block' style= 'width: 44px; height: 28px;' src= '{{asset "images/barchart.svg"}}' />
+            <h3 style= 'text-align: center; margin: 0px;'>All Articles</h3>
+          </div>
+      </div>
+      {{/is}}
     {{/is}}
   </div>
   <div class= 'col-xs-12'>
@@ -27,7 +36,7 @@
         {{/foreach}}
       {{/is}}
       <div style= 'text-align: center; margin-top: 32px; margin-bottom: 32px;'>
-        <a href= "{{@blog.url}}">
+        <a href= "https://www.deurali.co/index">
           <div class= 'button' style= 'display: inline-block;'>
             <h5>See All Articles</h5>
           </div>

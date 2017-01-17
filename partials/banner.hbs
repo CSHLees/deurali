@@ -1,5 +1,9 @@
   <section class= 'row'>
     <div class= 'col-xs-12 banner'>
+      {{#is "paged"}}
+      <img src= '{{@blog.cover}}' />
+      {{else}}
       <img src= '{{image}}' />
+      {{/is}}
     </div>
   </section>

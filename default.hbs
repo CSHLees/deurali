@@ -25,14 +25,14 @@
 
   {{!-- Styles'n'Scripts --}}
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather;400,700|Roboto:300" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Source+Serif+Pro:400,700">
   <link rel="stylesheet" type="text/css" href="{{asset 'css/blog.css'}}" />
 
 {{ghost_head}}
 
 </head>
 
-<body style= 'background-color: #343434;'>
+<body class= '{{body_class}}' style= 'background-color: #343434;'>
 <div class= 'container-fluid'>
   {{> toolbar}}
   {{{body}}}
